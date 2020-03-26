@@ -13,8 +13,6 @@ import org.apache.ibatis.annotations.Param;
  */
 @Mapper
 public interface PaymentDao {
-//    @Options(useGeneratedKeys = true,keyProperty = "payment.id")
-//    @Insert("insert into payment(serial) values(#{payment.serial})")
     int insertPayment(@Param("payment") Payment payment);
     Payment queryPaymentById(Long id);
 }

@@ -6,8 +6,8 @@ import lombok.NoArgsConstructor;
 
 /**
  * @author yb
- * @description 统一返回类
- * @data 2020/3/25
+ * @description
+ * @data 2020/3/26
  */
 @Data
 @AllArgsConstructor
