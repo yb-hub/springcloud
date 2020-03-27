@@ -1,0 +1,15 @@
+server:
+  port: 7002
+eureka:
+  instance:
+    hostname: eureka7002.com
+  client:
+    # false表示不行注册中心注册自己（自己就是注册中心）
+    register-with-eureka: false
+    # false表示自己就是注册中心，维护服务实例，不需要检索服务
+    fetch-registry: false
+    #设置与eureka server交互的地址 查询和注册服务都需要这个地址
+    #单机设置的地址为自己，但是多机需要相互注册，设置其他机器的地址
+    service-url:
+      #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://eureka7001.com:7001/eureka/ #集群

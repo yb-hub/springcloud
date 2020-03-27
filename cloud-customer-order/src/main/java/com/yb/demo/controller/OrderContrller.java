@@ -19,8 +19,8 @@ public class OrderContrller {
     @Autowired
     private RestTemplate restTemplate;
 
-    public static  final  String PAYMENT_URL = "http://localhost:8001/payment/insert";
-
+    //public static  final  String PAYMENT_URL = "http://localhost:8001/payment/insert";
+    public static final String PAYMENT_URL = "http://CLOUD-PROVIDER-PAYMENT-SERVICE"+"/payment/insert";
     @GetMapping("/customer/payment/insert")
     public CommonResult insert(@RequestBody Payment payment){
         return restTemplate.postForObject(PAYMENT_URL,payment,CommonResult.class);
