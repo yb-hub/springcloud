@@ -1,0 +1,18 @@
+server:
+  port: 8003
+
+spring:
+  application:
+    name: paymentconsul8003
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://47.99.193.37/springcloud_demo?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 123456
+  cloud:
+    consul:
+      host: 47.99.193.37
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
