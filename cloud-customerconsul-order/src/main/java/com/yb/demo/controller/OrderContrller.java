@@ -25,4 +25,8 @@ public class OrderContrller {
     public CommonResult insert(@RequestBody Payment payment){
         return restTemplate.postForObject(PAYMENT_URL,payment,CommonResult.class);
     }
+//    @GetMapping("/health")
+//    public String healhTest(){
+//        return "success";
+//    }
 }

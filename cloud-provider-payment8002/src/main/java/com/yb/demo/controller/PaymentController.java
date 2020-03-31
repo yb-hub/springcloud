@@ -22,6 +22,6 @@ public class PaymentController {
     @PostMapping("/payment/insert")
     public CommonResult insertPayment(@RequestBody Payment payment){
         paymentService.insertPayment(payment);
-        return new CommonResult(200,"success");
+        return new CommonResult(200,"8002:success");
     }
 }

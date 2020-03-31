@@ -1,3 +1,4 @@
 com\yb\demo\config\ApplicationContextConfig.class
 com\yb\demo\OrderMain.class
+com\yb\rule\MySelfRule.class
 com\yb\demo\controller\OrderContrller.class
