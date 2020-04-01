@@ -1,0 +1,4 @@
+com\yb\demo\controller\OrderController.class
+com\yb\demo\OrderFeignMain80.class
+com\yb\demo\service\PaymentService.class
+com\yb\rule\MySelfRule.class

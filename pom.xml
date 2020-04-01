@@ -18,6 +18,9 @@
     <module>cloud-provider-payment8002</module>
     <module>cloud-provider-paymentconsul8003</module>
     <module>cloud-customerconsul-order</module>
+      <module>cloud-customer-feign-order</module>
+      <module>cloud-provider-payment-hystrix8003</module>
+      <module>cloud-customer-hystrix-order</module>
   </modules>
 
 
