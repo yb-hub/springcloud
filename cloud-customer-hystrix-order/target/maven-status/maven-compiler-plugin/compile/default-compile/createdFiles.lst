@@ -1,3 +1,4 @@
 com\yb\demo\controller\OrderController.class
 com\yb\demo\service\PaymentService.class
 com\yb\demo\OrderHystrixMain.class
+com\yb\demo\service\PaymentFallbackService.class

@@ -21,6 +21,7 @@
       <module>cloud-customer-feign-order</module>
       <module>cloud-provider-payment-hystrix8003</module>
       <module>cloud-customer-hystrix-order</module>
+      <module>cloud-api-zuul</module>
   </modules>
 
 

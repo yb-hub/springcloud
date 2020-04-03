@@ -1,3 +1,4 @@
 C:\Users\86178\Desktop\springcloud_demo\cloud-customer-hystrix-order\src\main\java\com\yb\demo\service\PaymentService.java
 C:\Users\86178\Desktop\springcloud_demo\cloud-customer-hystrix-order\src\main\java\com\yb\demo\controller\OrderController.java
 C:\Users\86178\Desktop\springcloud_demo\cloud-customer-hystrix-order\src\main\java\com\yb\demo\OrderHystrixMain.java
+C:\Users\86178\Desktop\springcloud_demo\cloud-customer-hystrix-order\src\main\java\com\yb\demo\service\PaymentFallbackService.java

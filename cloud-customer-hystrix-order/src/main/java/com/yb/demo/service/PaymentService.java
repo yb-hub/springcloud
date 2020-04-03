@@ -13,11 +13,14 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @data 2020/4/1
  */
 @Component
-@FeignClient(value = "CLOUD-PROVIDER-PAYMENT-HYSTRIX8003")
+@FeignClient(value = "CLOUD-PROVIDER-PAYMENT-HYSTRIX8003",fallback = PaymentFallbackService.class)
 public interface PaymentService {
     @GetMapping("/payment/hystrix/success/{id}")
     CommonResult paymentSuccess(@PathVariable("id") Integer id);
 
     @GetMapping("/payment/hystrix/fail/{id}")
     CommonResult paymentFail(@PathVariable("id") Integer id);
+
+    @GetMapping("/payment/hystrix/fail2/{id}")
+    CommonResult paymentFail2(@PathVariable("id") Integer id);
 }

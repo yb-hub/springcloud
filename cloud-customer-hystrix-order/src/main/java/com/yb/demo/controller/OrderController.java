@@ -31,13 +31,20 @@ public class OrderController {
     }
 
     @GetMapping("/customer/hystrix/fail/{id}")
-    @HystrixCommand(fallbackMethod = "customerFailFallback",commandProperties = {
-            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds",value = "1000")
+    @HystrixCommand(commandProperties = {
+            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds",value = "5000")
     })
     public CommonResult customerFail(@PathVariable("id") Integer id){
-        paymentService.paymentFail(id);
-        log.debug("customer:fail"+id);
-        return new CommonResult(200,"customer:fail"+id);
+        CommonResult commonResult = paymentService.paymentFail(id);
+        log.info("customer:fail"+id);
+        return commonResult;
+    }
+
+    @GetMapping("/customer/hystrix/fail2/{id}")
+    public CommonResult customerFail2(@PathVariable("id") Integer id){
+        CommonResult commonResult = paymentService.paymentFail2(id);
+        log.info("customer:fail2"+id);
+        return commonResult;
     }
     public CommonResult customerFailFallback(@PathVariable("id") Integer id){
         return new CommonResult(200,"/(ㄒoㄒ)/~~"+"customer:fail"+id);

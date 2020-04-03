@@ -1,3 +1,4 @@
 com\yb\demo\PaymentHystrixMain8003.class
 com\yb\demo\service\PaymentService.class
 com\yb\demo\controller\PaymentHystrixController.class
+com\yb\demo\service\PaymentGlobalService.class

@@ -1,7 +1,8 @@
 package com.yb.demo.controller;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.yb.demo.common.CommonResult;
-import com.yb.demo.service.PaymentService;
+import com.yb.demo.service.PaymentGlobalService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,19 +21,27 @@ import javax.annotation.Resource;
 public class PaymentHystrixController {
     @Value("${server.port}")
     private String serverPort;
+
     @Resource
-    private PaymentService paymentService;
+    private PaymentGlobalService paymentGlobalService;
     @GetMapping("/payment/hystrix/success/{id}")
     public CommonResult paymentSuccess(@PathVariable("id") Integer id){
         log.info(serverPort+":"+"success"+id);
-        paymentService.success(id);
+        paymentGlobalService.success(id);
         return new CommonResult(200,serverPort+":"+"success"+id);
     }
 
     @GetMapping("/payment/hystrix/fail/{id}")
     public CommonResult paymentFail(@PathVariable("id") Integer id){
         log.info(serverPort+":"+"fail"+id);
-        String result = paymentService.fail(id);
-        return new CommonResult(200,serverPort+":"+result);
+        String result = paymentGlobalService.fail(id);
+        return new CommonResult(200,"fail:"+serverPort+":"+result);
+    }
+
+    @GetMapping("/payment/hystrix/fail2/{id}")
+    public CommonResult paymentFail2(@PathVariable("id") Integer id){
+        log.info(serverPort+":"+"fail2"+id);
+        String result = paymentGlobalService.fail2(id);
+        return new CommonResult(200,"fail2:"+serverPort+":"+result);
     }
 }

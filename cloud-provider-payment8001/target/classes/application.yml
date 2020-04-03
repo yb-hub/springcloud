@@ -26,3 +26,7 @@ eureka:
   instance:
     instance-id: payment8001 #不显示主机名称 actuator微服务的自动配置
     prefer-ip-address: true #访问路径显示ID地址 actuator微服务的自动配置
+
+logging:
+  level:
+    org.springframework.web: trace

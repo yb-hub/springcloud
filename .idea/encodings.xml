@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-api-commons" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-api-zuul" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-customer-feign-order" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-customer-hystrix-order" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-customer-order" charset="UTF-8" />
